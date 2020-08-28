@@ -10,7 +10,7 @@ import Post from "../../@types/models/Post";
 import theme from "../../theme";
 import api from "../../config/api";
 
-import { Container, PostFilter } from "./style";
+import { Container, PostFilter } from "./styles";
 
 import Table from "../../components/Table";
 import BreadCrumb from "../../components/BreadCrumb";
