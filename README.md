@@ -54,15 +54,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Explicação do design
 O design foi feito para ser simples e fácil de entender.
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
 
 # Observação
 As cores foram usadas de acordo com as passadas no site
