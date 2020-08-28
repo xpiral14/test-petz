@@ -1,13 +1,14 @@
 import { FC } from "react";
-import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 
-import api from "../../../config/api";
 import Post from "../../../@types/models/Post";
-import { Container, AuthorContainer, PostContainer } from "./style";
 import User from "../../../@types/models/User";
+
+import api from "../../../config/api";
+
+import { Container, AuthorContainer, PostContainer } from "./style";
+
 import BreadCrumb from "../../../components/BreadCrumb";
-import Comment from "../../../@types/models/Comment";
 import Table from "../../../components/Table";
 import Button from "../../../components/Button";
 interface PostInfoProps {

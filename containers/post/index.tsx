@@ -1,19 +1,22 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Container, PostFilter } from "./style";
-import Table from "../../components/Table";
-import Post from "../../@types/models/Post";
 import { FaInfoCircle, FaTrash } from "react-icons/fa";
 import Link from "next/link";
-import { GetServerSideProps } from "next";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 
+import User from "../../@types/models/User";
+import Post from "../../@types/models/Post";
+
+import theme from "../../theme";
 import api from "../../config/api";
+
+import { Container, PostFilter } from "./style";
+
+import Table from "../../components/Table";
 import BreadCrumb from "../../components/BreadCrumb";
 import Input from "../../components/Input";
-import User from "../../@types/models/User";
 import Button from "../../components/Button";
-import theme from "../../theme";
-import { useRouter } from "next/router";
+
 interface PostPageProps {
   posts: Post[];
 }
