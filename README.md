@@ -23,7 +23,7 @@ O design foi feito assim para ser simples e fácil de entender, a melhor forma d
 Seguindo o mesmo principio de ser simples, desenhei a tela para mostrar os dados de forma organizada seguindo uma ordem lógica. Primeiro as informações do autor, depois todas as informações do Post.
 
 # Acesso da aplicação
-A aplicação pode ser acessada clicando [aqui](https://petz-blog-ocqqj0f15.vercel.app/post/1).
+A aplicação pode ser acessada clicando [aqui](https://petz-blog-ocqqj0f15.vercel.app).
 Não é necessário baixar para ver o resultado, mas caso queira ter a experiência basta seguir os passos a baixo.
 
 1. Clone este repositório
