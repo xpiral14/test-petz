@@ -42,26 +42,31 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
 
   // seleção de autores para o filtro
   const authorOptions = useMemo(() => {
-    return authors?.map((author) => ({ label: author.name, id: author.id }));
+    const firstOption = { label: "Selecionar autor", id: 0 }
+    let authorswithLabel = !authors ? [firstOption] :[firstOption,
+      ...authors.map((author) => ({ label: author.name, id: author.id })),
+    ];
+
+    return authorswithLabel;
   }, [authors]);
   const router = useRouter();
 
   const deletePost = (postId: number) => {
-    
     return async () => {
       try {
         await api.delete(`posts/${postId}`);
-        alert("Post deletado com sucesso!")
+        alert("Post deletado com sucesso!");
         router.push("/post");
       } catch (error) {
         alert("erro ao deletar post");
       }
-    }
+    };
   };
   const onSubmit = async ({ title, user }) => {
     try {
+      console.log("o id é " + user)
       const response = await api.get<Post[]>(
-        `/posts?${title && `title=${title}&`}${user && `userId=${user}&`}`
+        `/posts?${title && `title=${title}&`}${user != 0 && `userId=${user}&`}`
       );
 
       setPostState(response.data);
