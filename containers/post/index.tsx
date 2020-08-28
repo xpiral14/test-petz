@@ -129,15 +129,4 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const res = await api.get("/posts");
-  const posts = await res.data;
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};
-
 export default PostPage;
