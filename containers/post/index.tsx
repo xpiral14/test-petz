@@ -123,7 +123,7 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
               <tr key={post.id}>
                 <td>{post.title}</td>
                 <td>{`${post.body.slice(0, 120)}...`}</td>
-                <td width={"200px"}>
+                <td>
                   <Link href={`/post/[id]`} as={`/post/${post.id}`}>
                     <a>
                       <FaInfoCircle color={theme.colors.light} />
