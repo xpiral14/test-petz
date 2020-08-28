@@ -1,4 +1,3 @@
-import "../../styles/globals.css";
 import Header from "../../components/Header";
 import GlobalStyle from "../../theme/GlobalStyle";
 import { Container, Content } from "./style";
