@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Container } from "./style";
+import { Container } from "./styles";
 import Link from "next/link";
 
 const Header: FC = () => {
