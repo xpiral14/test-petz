@@ -1,19 +1,30 @@
 # Teste para a vaga de desenvolvedor Frontend na Petz
 
 # Bibliotecas usadas
+
 ### React JS
   Uma famosa biblioteca para criações SPAs (Single page application) bem completas.
+
 ### Next JS
  Framewok criado para otimizar e melhorar o SEO de aplicações react.
+
 ### react-hook-form
    Biblioteca utilizada para validação de formulários de forma fácil e performática.
+
 ### Axios 
    Biblioca utilizada para fazer requisições http com todos os verbos disponíveis. É ótima para criar padrões de url e evitar repetições no código.
+
 ### React Icons
    Biblioteca utilizada para obter os mais diversos ícones open source da comunidade.
+
 ### Styled Components
 Biblioteca que ajuda na estilização do código de maneira fácil e escalável. É bem parecida com o SASS, mas é focada na estilização de componentes React.
+
+### React Markdown
+Biblioteca para lidar com textos no padrão markdown.
+
 # Design da aplicação:
+
 ### Listagem de posts
 ![Listagem do post](/post-page.png)
 O design foi feito assim para ser simples e fácil de entender, a melhor forma de vizualizar muitos dados assim são por tabelas, e por brevidade coloquei apenas os campos essenciais para a tela.
@@ -54,3 +65,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Explicação do design
 O design foi feito para ser simples e fácil de entender.
+
+# Observação
+As cores foram usadas de acordo com as passadas no site
