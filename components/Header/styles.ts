@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../theme";
 
 export const Container = styled.div`
-  background-color: #ffd400;
+  background-color: ${theme.colors.secondary};
   margin-bottom: 20px;
   > div {
     img {

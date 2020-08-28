@@ -9,12 +9,12 @@ const Header: FC = () => {
         <img src="/images/logo-petz.png" width= "60px" alt=""/>
         <ul>
           <li>
-            <Link href="/" as="/">
+            <Link href="/" >
               <a>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="/post" as="/post">
+            <Link href="/post">
               <a>Posts</a>
             </Link>
           </li>
