@@ -11,6 +11,7 @@ import { Container, AuthorContainer, PostContainer } from "./style";
 import BreadCrumb from "../../../components/BreadCrumb";
 import Table from "../../../components/Table";
 import Button from "../../../components/Button";
+import Head from "next/head";
 interface PostInfoProps {
   post: Post;
   user: User;
@@ -29,6 +30,11 @@ const PostInfo: FC<PostInfoProps> = ({ post, user }) => {
   };
   return (
     <Container>
+      <Head>
+        <title>
+          Detalhes do post {post.title}
+        </title>
+      </Head>
       <BreadCrumb
         links={[
           { label: "Home", link: "/" },

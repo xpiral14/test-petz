@@ -1,14 +1,18 @@
 import { FC } from "react";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 import { Container } from "./styles";
+import Head from "next/head";
 interface HomeProps {
-  text: string
+  text: string;
 }
-const Home: FC<HomeProps> = ({text}) => {
+const Home: FC<HomeProps> = ({ text }) => {
   return (
     <Container>
+      <Head>
+        <title>Home - Teste Frontend Petz</title>
+      </Head>
       <div>Pagina inicial</div>
-      <ReactMarkdown source = {text} />
+      <ReactMarkdown source={text} />
     </Container>
   );
 };

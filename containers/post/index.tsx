@@ -16,6 +16,7 @@ import Table from "../../components/Table";
 import BreadCrumb from "../../components/BreadCrumb";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import  Head from "next/head";
 
 interface PostPageProps {
   posts: Post[];
@@ -42,10 +43,13 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
 
   // seleção de autores para o filtro
   const authorOptions = useMemo(() => {
-    const firstOption = { label: "Selecionar autor", id: 0 }
-    let authorswithLabel = !authors ? [firstOption] :[firstOption,
-      ...authors.map((author) => ({ label: author.name, id: author.id })),
-    ];
+    const firstOption = { label: "Selecionar autor", id: 0 };
+    let authorswithLabel = !authors
+      ? [firstOption]
+      : [
+          firstOption,
+          ...authors.map((author) => ({ label: author.name, id: author.id })),
+        ];
 
     return authorswithLabel;
   }, [authors]);
@@ -64,7 +68,7 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
   };
   const onSubmit = async ({ title, user }) => {
     try {
-      console.log("o id é " + user)
+      console.log("o id é " + user);
       const response = await api.get<Post[]>(
         `/posts?${title && `title=${title}&`}${user != 0 && `userId=${user}&`}`
       );
@@ -75,6 +79,9 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
 
   return (
     <Container>
+      <Head>
+        <title>Posts - Test Petz</title>
+      </Head>
       <BreadCrumb
         links={[
           { label: "Home", link: "/" },
