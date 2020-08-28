@@ -68,7 +68,6 @@ const PostPage: React.FC<PostPageProps> = ({ posts }) => {
   };
   const onSubmit = async ({ title, user }) => {
     try {
-      console.log("o id é " + user);
       const response = await api.get<Post[]>(
         `/posts?${title && `title=${title}&`}${user != 0 && `userId=${user}&`}`
       );
